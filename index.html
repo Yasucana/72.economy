@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economy Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="mode-selection">
+        <h1>Economy Simulator</h1>
+        <button id="beginner-mode">Beginner Mode</button>
+        <button id="advanced-mode">Advanced Mode</button>
+    </div>
+    <div id="game-container" style="display: none;">
+        <div id="graph-area">
+            <canvas id="population-chart"></canvas>
+            <canvas id="balance-chart"></canvas>
+            <canvas id="price-chart"></canvas>
+        </div>
+        <div id="control-panel">
+            <label>Tax Rate: <input type="range" id="tax-slider" min="0" max="20" value="10"></label>
+            <span id="tax-value">10%</span>
+            <button id="invest-housing">Invest in Housing</button>
+            <button id="invest-employment">Invest in Employment</button>
+            <button id="invest-resources">Invest in Resources</button>
+            <button id="boost-economy">Boost Economy</button>
+            <button id="stabilize-market">Stabilize Market</button>
+            <button id="next-turn">Next Turn</button>
+            <button id="reset">Reset</button>
+            <button id="save">Save</button>
+            <button id="load">Load</button>
+        </div>
+        <div id="log-area">
+            <ul id="logs"></ul>
+        </div>
+    </div>
+    <script src="economyEngine.js"></script>
+    <script src="ui.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
